@@ -6,16 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Alert extends Component
+class StatusBadge extends Component
 {
     /**
      * Create a new component instance.
      */
-
-    public string $type;
-    public function __construct(string $type)
+    public function __construct()
     {
-        $this->type = $type;
+        //
     }
 
     /**
@@ -23,6 +21,6 @@ class Alert extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.alert');
+        return view('components.status-badge');
     }
 }

@@ -44,7 +44,7 @@
                 <option value="">Pilih jurusan</option>
                 <option value="">AKL</option>
                 <option value="">TKJ</option>
-                <option value="">BiD</option>
+                <option value="">BD</option>
             </select>
         </div>
 

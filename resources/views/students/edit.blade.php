@@ -44,7 +44,7 @@
                 class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
                 <option value="" selected>AKL</option>
                 <option value="">TKJ</option>
-                <option value="">BiD</option>
+                <option value="">BD</option>
             </select>
         </div>
 
