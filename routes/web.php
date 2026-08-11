@@ -30,7 +30,7 @@ Route::name('students.')->prefix('students')->group(function () {
     // Memperbarui data
     Route::put('/{id}', [StudentController::class, 'update'])->name('update');
     // Menghapus data
-    Route::delete('/{id}/delete', [StudentController::class, 'destroy'])->name('destroy');
+    Route::delete('/{id}', [StudentController::class, 'destroy'])->name('destroy');
 });
 
 //Menejemen data guru
@@ -48,7 +48,7 @@ Route::name('teachers.')->prefix('teachers')->group(function () {
     // Memperbarui data
     Route::put('/{id}', [TeacherController::class, 'update'])->name('update');
     // Menghapus data
-    Route::delete('/{id}/delete', [TeacherController::class, 'destroy'])->name('destroy');
+    Route::delete('/{id}', [TeacherController::class, 'destroy'])->name('destroy');
 });
 
 //Menejemen data kelas (invokable)
@@ -66,7 +66,7 @@ Route::name('classes.')->prefix('classes')->group(function () {
     // Memperbarui data
     Route::put('/{id}', UpdateController::class)->name('update');
     // Menghapus data
-    Route::delete('/{id}/delete', DestroyController::class)->name('destroy');
+    Route::delete('/{id}', DestroyController::class)->name('destroy');
 });
 
 //Menejemen data jurusan (resource)

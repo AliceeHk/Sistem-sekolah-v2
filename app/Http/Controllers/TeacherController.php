@@ -9,6 +9,7 @@ class TeacherController extends Controller
     public function index()
     {
         $title = "Sistem Sekolah - Daftar Guru";
+
         $teachers = [
             [
                 'id' => 1,
@@ -16,7 +17,7 @@ class TeacherController extends Controller
                 'name' => 'Budi Santoso',
                 'gender' => 'Laki-Laki',
                 'subject' => 'Akuntansi Dasar',
-                'phone' => '081234560001',
+                'phone_number' => '081234560001',
                 'status' => 'Aktif',
             ],
             [
@@ -25,46 +26,54 @@ class TeacherController extends Controller
                 'name' => 'Siti Aminah',
                 'gender' => 'Perempuan',
                 'subject' => 'Jaringan Komputer',
-                'phone' => '081234560002',
+                'phone_number' => '081234560002',
                 'status' => 'Aktif',
-            ]
+            ],
         ];
 
         return view('teachers.index', [
             'title' => $title,
-            'teachers' => $teachers
+            'teachers' => $teachers,
         ]);
     }
 
     public function create()
     {
         $title = "Sistem Sekolah - Tambah Guru";
+
         return view('teachers.create', [
-            'title' => $title
+            'title' => $title,
         ]);
     }
+
     public function store()
     {
         return "Melakukan penambahan data guru";
     }
+
     public function show(string $id)
     {
         $title = "Sistem Sekolah - Detail Guru";
+
         return view('teachers.show', [
-            'title' => $title
+            'title' => $title,
         ]);
     }
+
     public function edit(string $id)
     {
         $title = "Sistem Sekolah - Edit Guru";
+
         return view('teachers.edit', [
-            'title' => $title
+            'title' => $title,
         ]);
     }
+
     public function update(string $id)
     {
         return "Melakukan perubahan data guru dengan ID: {$id}";
     }
+
     public function destroy(string $id)
     {
         return "Menghapus data guru dengan ID: {$id}";
