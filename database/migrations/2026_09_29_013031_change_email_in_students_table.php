@@ -1,20 +1,19 @@
 <?php
 
+use Illuminate\Console\Scheduling\SchedulingMutex;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
         Schema::table('students', function (Blueprint $table) {
-            if(Schema::hasColumn('students','email')) {
-                $table->string('email', 200)->change(); 
-                // WAJIB ADA ->CHANGE()
+            if (Schema::hasColumn('students', 'email')) {
+                $table->string('email', 200)->change();
             }
         });
     }
@@ -25,9 +24,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('students', function (Blueprint $table) {
-            if(Schema::hasColumn('students','email')) {
+            if (Schema::hasColumn('students', 'email')) {
                 $table->string('email', 255)->change();
-                // KEMBALIKAN KE PANJANG SEMULA
             }
         });
     }

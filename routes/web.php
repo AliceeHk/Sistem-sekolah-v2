@@ -24,13 +24,13 @@ Route::name('students.')->prefix('students')->group(function () {
     // Menyimpan data baru
     Route::post('/', [StudentController::class, 'store'])->name('store');
     // Menampilkan detail satu data
-    Route::get('/{id}', [StudentController::class, 'show'])->name('show');
+    Route::get('/{student}', [StudentController::class, 'show'])->name('show');
     // Menampilkan form perubahan data
-    Route::get('/{id}/edit', [StudentController::class, 'edit'])->name('edit');
+    Route::get('/{student}/edit', [StudentController::class, 'edit'])->name('edit');
     // Memperbarui data
-    Route::put('/{id}', [StudentController::class, 'update'])->name('update');
+    Route::put('/{student}', [StudentController::class, 'update'])->name('update');
     // Menghapus data
-    Route::delete('/{id}', [StudentController::class, 'destroy'])->name('destroy');
+    Route::delete('/{student}', [StudentController::class, 'destroy'])->name('destroy');
 });
 
 //Menejemen data guru
